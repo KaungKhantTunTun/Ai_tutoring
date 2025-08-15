@@ -1,0 +1,173 @@
+/* ===== GENERAL ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: white;
+  color: #000;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #b9e4ff;
+  padding: 1em 2em;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-right {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+.quizzy-top-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo-text {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: bold;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 0.6em 1.4em;
+  min-width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background: #4ce165;
+}
+
+.btn-primary:hover {
+  background: #3ec557;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(76,225,101,0.5);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2em auto;
+  padding: 1em;
+}
+
+.intro ul, .features ul {
+  padding-left: 1.5em;
+}
+
+.features {
+  position: relative;
+}
+
+.quizzy-mid-img {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 120px;
+}
+
+.meet-quizzy {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.quizzy-large-img {
+  width: 150px;
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+/* ===== RESPONSIVE (I HOPE) ===== */
+/* Phones */
+@media (max-width: 600px) {
+  .btn-primary {
+    font-size: 0.8rem;     
+    padding: 0.4em 0.8em;     
+    min-width: auto;          
+    max-width: 45%;         
+    box-sizing: border-box;
+  }
+
+  .header-right {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: nowrap;         /* prevent wrapping */
+  }
+
+  .quizzy-top-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    min-width: 90px;
+  }
+}
+
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .btn-primary { font-size: 1rem; padding: 0.6em 1.2em; min-width: 100px; }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  header { padding: 1.5em 3em; }
+  .btn-primary { font-size: 1.1rem; padding: 0.8em 1.6em; min-width: 120px; }
+}
